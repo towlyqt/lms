@@ -180,9 +180,10 @@ class LMSTcpdfInvoice extends LMSInvoice {
 					$this->backend->Cell($h_width['taxlabel'], 5, $item['taxlabel'], 1, 0, 'C', 0, '', 1);
 					$this->backend->Cell($h_width['totaltax'], 5, moneyf($item['tax']), 1, 0, 'R', 0, '', 1);
 					$this->backend->Cell($h_width['total'], 5, moneyf($item['total']), 1, 0, 'R', 0, '', 1);
-					$this->backend->Ln(12);
+					$this->backend->Ln();
 					$i++;
 				}
+				$this->backend->Ln(12);
 			}
 
 			/* reason of issue of invoice correction */
