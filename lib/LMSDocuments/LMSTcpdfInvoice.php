@@ -733,7 +733,7 @@ class LMSTcpdfInvoice extends LMSInvoice {
 			$this->backend->SetFont('arial', '', 8);
 			$h = $this->backend->getStringHeight(0, $tmp);
 			$tmp = mb_ereg_replace('\r?\n', '<br>', $tmp);
-			$this->backend->writeHTMLCell(0, 0, '', 188 - $h, $tmp, 0, 1, 0, true, 'C');
+			$this->backend->writeHTMLCell(0, 0, '', '', $tmp, 0, 1, 0, true, 'C');
 		}
 	}
 
